@@ -7,13 +7,13 @@ using System;
 
 namespace GorillaTierList
 {
-    [BepInPlugin(PluginInfo.GUID, PluginInfo.Name, PluginInfo.Version)]
+    [BepInPlugin(Constants.GUID, Constants.Name, Constants.Version)]
     public class Plugin : BaseUnityPlugin
     {
         public void Awake()
         {
             Assembly assembly = Assembly.GetExecutingAssembly();
-            new Harmony(PluginInfo.GUID).PatchAll(assembly);
+            new Harmony(Constants.GUID).PatchAll(assembly);
            
         }
         
